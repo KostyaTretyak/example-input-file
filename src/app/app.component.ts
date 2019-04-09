@@ -11,7 +11,7 @@ import { FormControl, Validators } from '@ng-stack/forms';
   <input
     type="file"
     accept=".jpg,.jpeg,.png"
-    (selectedFiles)="onSelectedFiles($event)"
+    (select)="onSelect($event)"
     [formControl]="formControl"
   >
 `
@@ -26,9 +26,9 @@ export class AppComponent implements OnInit {
     this.formControl = new FormControl(null, validator);
   }
 
-  onSelectedFiles(files: File[]) {
-    // You can get selected files from `selectedFiles` output event on `input[type=file]`
-    console.log('selectedFiles:', files);
+  onSelect(files: File[]) {
+    // You can get selected files from `select` output event on `input[type=file]`
+    console.log('selected files:', files);
 
     const validErr = this.formControl.getError('fileMaxSize');
 

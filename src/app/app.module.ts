@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgStackFormsModule } from '@ng-stack/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+import { NgStackFormsModule } from '@ng-stack/forms';
 import { ApiMockModule } from '@ng-stack/api-mock';
 
 import { AppComponent } from './app.component';
