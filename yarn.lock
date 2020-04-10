@@ -990,7 +990,7 @@
   resolved "https://registry.yarnpkg.com/@ng-stack/api-mock/-/api-mock-1.1.0.tgz#aee133124fdc6bf647800c5df327d918696fd049"
   integrity sha512-5NcvFudSbuTzvSsWWaY3Q5Vn7wTqCwGO1l632UwaDFUx71BDWkKY4HI1IFF24dlbrcUxhcHLaOC7otWAtVVBag==
 
-"@ng-stack/forms@^2.0.0-beta.1":
+"@ng-stack/forms@^2.0.0-beta.3":
   version "2.0.0-beta.3"
   resolved "https://registry.yarnpkg.com/@ng-stack/forms/-/forms-2.0.0-beta.3.tgz#8a042e34ead4a91d2777bab38f863005f7a5bcd3"
   integrity sha512-8qekgI3uNO1NHSeKwKPKS7dz4pV+VdBxlMUSeXhGrFF1WrKQOuaIC4jn+yKcnkOWrQhOpDkJTfqYBkQ9sA4/BA==
