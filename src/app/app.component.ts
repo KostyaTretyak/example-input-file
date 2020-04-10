@@ -6,20 +6,15 @@ import { FormControl, Validators } from '@ng-stack/forms';
 @Component({
   selector: 'my-app',
   template: `
-  <p>Tap on this window and press <code>Ctrl+Shift+I</code> to see console.log() output</p>
+    <p>Tap on this window and press <code>Ctrl+Shift+I</code> to see console.log() output</p>
 
-  <input
-    type="file"
-    accept=".jpg,.jpeg,.png"
-    (select)="onSelect($event)"
-    [formControl]="formControl"
-  >
-`
+    <input type="file" accept=".jpg,.jpeg,.png" (select)="onSelect($event)" [formControl]="formControl" />
+  `,
 })
 export class AppComponent implements OnInit {
   formControl: FormControl<FormData>;
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
 
   ngOnInit() {
     const validator = Validators.fileMaxSize(1024 * 1024);
@@ -53,4 +48,3 @@ export class AppComponent implements OnInit {
     console.log('%c' + '='.repeat(60), 'color: brown');
   }
 }
-

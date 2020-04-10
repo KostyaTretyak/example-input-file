@@ -16,13 +16,13 @@ import { ApiMockAvatarsService } from './api-mock-avatars.service';
     // !environment.production && environment.runApiMock
     true
       ? ApiMockModule.forRoot(ApiMockAvatarsService, {
-        delay: 500,
-        showLog: true,
-        clearPrevLog: true
-      })
-      : []
+          delay: 500,
+          showLog: true,
+          clearPrevLog: true,
+        })
+      : [],
   ],
   declarations: [AppComponent],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,21 +1,19 @@
 import { Injectable } from '@angular/core';
 
-import { ApiMockCallbackResponse, ApiMockRouteGroup, ApiMockService } from '@ng-stack/api-mock';
+import { ApiMockService, ApiMockRootRoute, ApiMockResponseCallback } from '@ng-stack/api-mock';
 
 @Injectable({ providedIn: 'root' })
 export class ApiMockAvatarsService implements ApiMockService {
-  getRouteGroups(): ApiMockRouteGroup[] {
+  getRoutes(): ApiMockRootRoute[] {
     return [
-      [
-        {
-          path: 'api/users/250/avatars/1',
-          callbackResponse: this.getResponse()
-        }
-      ]
+      {
+        path: 'api/users/250/avatars/1',
+        responseCallback: this.getResponse(),
+      },
     ];
   }
 
-  private getResponse(): ApiMockCallbackResponse {
+  private getResponse(): ApiMockResponseCallback {
     return () => {
       return { url: 'https://example.com/avatar/1' };
     };
